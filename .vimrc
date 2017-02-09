@@ -1,7 +1,9 @@
-set nocompatible              " be iMproved, required 
-filetype off                  " required                                                        
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" set the runtime path to include Vundle and initialize                                         
+set history=9001
+
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -11,6 +13,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'rust-lang/rust.vim'
 
+" My favorite SublimeText/Atom feature "
+Plugin 'airblade/vim-gitgutter'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -18,5 +23,5 @@ filetype plugin indent on
 set tabstop=2
 " when indenting with '>', use 4 spaces width
 set shiftwidth=2
-" On pressing tab, insert 4 spaces
+" On pressing tab, insert spaces
 set expandtab
