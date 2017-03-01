@@ -1,0 +1,16 @@
+! Map capslock to escape
+! From StackOverflow:
+! http://stackoverflow.com/questions/2176532/how-to-map-caps-lock-key-in-vim
+! I removed the line that remaps esc to caps because I never use capslock
+! and I want to keep the muscle memory for the escape key.
+
+! For Mac:
+! system preferences > keyboard > modifier keys 
+! caps_lock to escape
+! 
+! For Linux:
+! xmodmap caps_to_esc # This file
+
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
