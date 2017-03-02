@@ -9,7 +9,7 @@
 ! caps_lock to escape
 ! 
 ! For Linux:
-! xmodmap caps_to_esc # This file
+! Leave this file in your home directory / call $ xmodmap ~/.Xmodmap 
 
 remove Lock = Caps_Lock
 keysym Caps_Lock = Escape
