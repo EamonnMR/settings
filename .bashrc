@@ -5,3 +5,5 @@ alias download="rsync -vzhra -e ssh --rsync-path='sudo rsync'"
 
 export NVM_DIR="/home/emr/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+ssh-add -K # So you don't need to keep typing in the passphrase
