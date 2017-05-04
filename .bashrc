@@ -2,6 +2,13 @@ alias server="python -m SimpleHTTPServer 8000"
 alias serverp="python -m SimpleHTTPServer"
 alias download="rsync -vzhra -e ssh --rsync-path='sudo rsync'"
 
+# Python stuff
+alias venv="virtualenv venv"
+alias venv3="virtualenv -p python3 venv"
+alias vba="source venv/bin/activate"
+alias dea="deactivate"
+alias pip-inst="pip install -r requirements.txt"
+
 # Load NVM (Only if NVM is installed)
 export NVM_DIR="$HOME/.nvm"
 
