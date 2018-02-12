@@ -3,11 +3,14 @@ alias serverp="python -m SimpleHTTPServer"
 alias download="rsync -vzhra -e ssh --rsync-path='sudo rsync'"
 
 # Python stuff
-alias venv="virtualenv venv"
+alias venv="virtualenv venv" # Still defaulting to python2
+alias venv2="virtualenv venv2" # Creates an explicitly python2 venv for your 2/3 projects
 alias venv3="virtualenv -p python3 venv"
 alias vba="source venv/bin/activate"
+alias vba2="source venv2/bin/activate" #Activates secondary python2 venv
+
 alias dea="deactivate"
-alias pip-inst="pip install -r requirements.txt"
+alias pir="pip install -r requirements.txt"
 
 # Load NVM (Only if NVM is installed)
 export NVM_DIR="$HOME/.nvm"
