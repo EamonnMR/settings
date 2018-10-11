@@ -1,6 +1,7 @@
 alias server="python -m SimpleHTTPServer 8000"
 alias serverp="python -m SimpleHTTPServer"
 alias download="rsync -vzhra -e ssh --rsync-path='sudo rsync'"
+alias sheepshaver="sudo padsp SheepShaver"
 
 # Python stuff
 alias venv="virtualenv venv" # Still defaulting to python2
