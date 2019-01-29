@@ -33,6 +33,7 @@ case "$(uname -s)" in
 
   Linux)
      alias psg="ps -aux | grep";
+     alias open="xdg-open"
      ;;
 
    # Add more strings here if I ever need this on a different OS for some reason
