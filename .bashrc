@@ -26,14 +26,18 @@ fi
 
 case "$(uname -s)" in
 
-  Darwin)
+  Darwin)  # OSX
      ssh-add -K  # Non-annoying SSH Add)
      alias psg="ps -ax | grep";
      ;;
 
   Linux)
+     # Find this running program
      alias psg="ps -aux | grep";
+     # I like OSX's 'open'
      alias open="xdg-open"
+     # Renoise needs to run as root for the audio to sound good and needs the VST path set.
+     alias renoise="export VST_PATH="$VST_PATH:/usr/lib/vst:~/.vst:/usr/lib/lxvst" && sudo -E bash -c 'renoise'"
      ;;
 
    # Add more strings here if I ever need this on a different OS for some reason
