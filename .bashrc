@@ -29,6 +29,7 @@ case "$(uname -s)" in
   Darwin)  # OSX
      ssh-add -K  # Non-annoying SSH Add)
      alias psg="ps -ax | grep";
+     alias clip="pbcopy";
      ;;
 
   Linux)
@@ -38,6 +39,8 @@ case "$(uname -s)" in
      alias open="xdg-open"
      # Renoise needs to run as root for the audio to sound good and needs the VST path set.
      alias renoise="export VST_PATH="$VST_PATH:/usr/lib/vst:~/.vst:/usr/lib/lxvst" && sudo -E bash -c 'renoise'"
+     # Getting stuff into the clipboard (requires xClip)
+     alias clip="xclip -selection c"
      ;;
 
    # Add more strings here if I ever need this on a different OS for some reason
