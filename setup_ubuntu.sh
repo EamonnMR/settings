@@ -51,6 +51,16 @@ sudo apt install ansible
 
 curl https://sh.rustup.rs -sSf | sh
 
+# Install dotfiles
+curl https://github.com/EamonnMR/settings/blob/master/.bashrc --output .bashrc
+curl https://github.com/EamonnMR/settings/blob/master/.Xmodmap --output .Xmodmap
+curl https://github.com/EamonnMR/settings/blob/master/.vimrc --output .vimrc
+curl https://github.com/EamonnMR/settings/blob/master/.tmux.conf --output .tmux.conf
+
+# Install Vundle plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
 echo "https://dzone.com/articles/how-turn-firefox-browser-cache"
 
 echo "https://flutter.dev/docs/get-started/install/linux"
@@ -61,4 +71,7 @@ echo "Install BabylonJS Blender Plugin:"
 
 echo "https://doc.babylonjs.com/resources/blender"
 
+
 echo "Download Renoise"
+
+echo "Download and install Syncterm"
