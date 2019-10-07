@@ -15,6 +15,10 @@ sudo apt install
   curl \
   wget \
   
+# (to be installed later)
+# TODO: Automate this install
+curl -f https://github.com/BabylonJS/BlenderExporter/raw/master/Blender2Babylon-6.2.zip
+  
 # Games
 sudo apt install \
   mupen64 \
@@ -51,7 +55,18 @@ sudo apt install ansible
 
 curl https://sh.rustup.rs -sSf | sh
 
-# Install dotfiles
+# For Mac Emulator:
+sudo apt install \
+  build-essential \
+  libgtk2.0-dev \
+  x11proto-xf86dga-dev \
+  libesd0-dev \
+  libxxf86dga-dev \
+  libxxf86dga1 \
+  libsdl1.2-dev \
+  osspd
+
+# Download dotfiles
 curl https://github.com/EamonnMR/settings/blob/master/.bashrc --output .bashrc
 curl https://github.com/EamonnMR/settings/blob/master/.Xmodmap --output .Xmodmap
 curl https://github.com/EamonnMR/settings/blob/master/.vimrc --output .vimrc
@@ -61,17 +76,12 @@ curl https://github.com/EamonnMR/settings/blob/master/.tmux.conf --output .tmux.
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
-echo "https://dzone.com/articles/how-turn-firefox-browser-cache"
-
-echo "https://flutter.dev/docs/get-started/install/linux"
-
-curl -f https://github.com/BabylonJS/BlenderExporter/raw/master/Blender2Babylon-6.2.zip
-
-echo "Install BabylonJS Blender Plugin:"
-
-echo "https://doc.babylonjs.com/resources/blender"
-
-
-echo "Download Renoise"
-
-echo "Download and install Syncterm"
+# Manual Installs/settings
+firefox \
+  -new-tab -url about:settings \
+  -new-tab -url https://dzone.com/articles/how-turn-firefox-browser-cache \
+  -new-tab -url https://flutter.dev/docs/get-started/install/linux \
+  -new-tab -url https://doc.babylonjs.com/resources/blender \
+  -new-tab -url https://www.erb.pw/how-to-install-syncterm-for-linux-from-source/ \
+  -new-tab -url "https://backstage.renoise.com/frontend/app/index.html#/login" \
+  -new-tab -url http://blog.eamonnmr.com/2018/10/os9-on-ubuntu/
