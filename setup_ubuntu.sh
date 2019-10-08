@@ -63,8 +63,6 @@ cd Downloads
 curl -f "https://downloads.tuxfamily.org/godotengine/3.1.1/Godot_v$GODOT_VER-stable_x11.64.zip" -o "godot_$GODOT_VER.zip"
 unar "godot_$GODOT_VER.zip"
 cd ..
-mv "Downloads/Godot_v$GODOT_VER-stable_x11.64.zip" .
-chmod a+x "Godot_v$GODOT_VER-stable_x11.64"
 
 # Classic Mac Emulator Dependencies:
 sudo apt install \
