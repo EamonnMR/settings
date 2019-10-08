@@ -2,6 +2,8 @@
 sudo apt update
 sudo apt upgrade
 
+sudo add-apt-repository universe
+
 # Basic Development Tools
 sudo apt install
   vim \
@@ -46,6 +48,10 @@ sudo apt install \
   sbcl \
   htop \
   libsdl2-dev \
+  tlp \
+  
+sudo add-apt-repository ppa:linuxuprising/apps
+sudo apt install tlpui
   
 sudo snap install go --classic
 
