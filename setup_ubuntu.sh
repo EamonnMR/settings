@@ -100,5 +100,6 @@ firefox \
   -new-tab -url https://doc.babylonjs.com/resources/blender \
   -new-tab -url https://www.erb.pw/how-to-install-syncterm-for-linux-from-source/ \
   -new-tab -url "https://backstage.renoise.com/frontend/app/index.html#/login" \
+  -new-tab -url https://www.renoise.com/tools/midi-convert
   -new-tab -url http://blog.eamonnmr.com/2018/10/os9-on-ubuntu/ \
   -new-tab -url https://github.com/godotengine/godot-blender-exporter \
