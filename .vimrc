@@ -25,3 +25,14 @@ set tabstop=2
 set shiftwidth=2
 " On pressing tab, insert spaces
 set expandtab
+
+" https://vim.fandom.com/wiki/Toggle_spellcheck_with_function_keys
+" Spell Check
+function! ToggleSpell()
+  setlocal spell! spell?
+endfunction
+
+nmap <silent> <F7> :call ToggleSpell()<CR>
+
+command Sp call ToggleSpell()
+
