@@ -5,7 +5,7 @@ sudo apt upgrade
 sudo add-apt-repository universe
 
 # Basic Development Tools
-sudo apt install
+sudo apt install \
   vim \
   gimp \
   blender \
@@ -16,6 +16,20 @@ sudo apt install
   curl \
   wget \
   
+# Dotfiles
+git clone https://github.com/EamonnMR/settings.git  # Cursed and re-cursed!
+mv settings/.bashrc .
+mv settings/.Xmodmap .
+mv settings/.vimrc .
+mv settings/.tmux.conf .
+
+# Install Vundle plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
+# Apply xmodmap
+xmodmap ~/.Xmodmap
+
 # Blender Exporters
 # Manual Installation required later, but get the files up front
 git clone git@github.com:godotengine/godot-blender-exporter.git
@@ -33,35 +47,35 @@ sudo apt install \
 sudo apt install \
   vlc \
   unar \
+  irssi \
   audacity \
 
 # Misc Tools
 sudo apt install \
   build-essential \
   tiled \
-  audacity \
   codeblocks \
   guile-2.0-dev \
   jsonlint \
-  docker.io \
   libglu1-mesa \
   sbcl \
   htop \
   libsdl2-dev \
   tlp \
+  docker.io \
   
 sudo add-apt-repository ppa:linuxuprising/apps
 sudo apt install tlpui
   
-sudo snap install go --classic
+# sudo snap install go --classic
 
 sudo apt install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 
-curl https://sh.rustup.rs -sSf | sh
+#curl https://sh.rustup.rs -sSf | sh
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+#curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 
 # Godot Engine
 GODOT_VER="3.1.1";
@@ -71,6 +85,7 @@ unar "godot_$GODOT_VER.zip"
 cd ..
 
 # Classic Mac Emulator Dependencies:
+#
 sudo apt install \
   build-essential \
   libgtk2.0-dev \
@@ -81,20 +96,9 @@ sudo apt install \
   libsdl1.2-dev \
   osspd
 
-# Dotfiles
-git clone https://github.com/EamonnMR/settings.git  # Cursed and re-cursed!
-mv settings/.bashrc .
-mv settings/.Xmodmap .
-mv settings/.vimrc .
-mv settings/.tmux.conf .
-
-# Install Vundle plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
 
 # Manual Installs/settings
 firefox \
-  -new-tab -url about:settings \
   -new-tab -url https://dzone.com/articles/how-turn-firefox-browser-cache \
   -new-tab -url https://flutter.dev/docs/get-started/install/linux \
   -new-tab -url https://doc.babylonjs.com/resources/blender \
@@ -103,3 +107,5 @@ firefox \
   -new-tab -url https://www.renoise.com/tools/midi-convert
   -new-tab -url http://blog.eamonnmr.com/2018/10/os9-on-ubuntu/ \
   -new-tab -url https://github.com/godotengine/godot-blender-exporter \
+
+exit 0
