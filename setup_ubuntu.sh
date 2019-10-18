@@ -18,10 +18,13 @@ sudo apt install \
   
 # Dotfiles
 git clone https://github.com/EamonnMR/settings.git  # Cursed and re-cursed!
-mv settings/.bashrc .
-mv settings/.Xmodmap .
-mv settings/.vimrc .
-mv settings/.tmux.conf .
+ln -s settings/.bashrc
+ln -s settings/.Xmodmap .
+ln -s settings/.vimrc .
+ln -s settings/.tmux.conf .
+
+git config --global user.email "Eamonn.m.r@gmail.com"
+git config --global user.name "EamonnMR"
 
 # Install Vundle plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
