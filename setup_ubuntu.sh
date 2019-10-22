@@ -25,6 +25,7 @@ ln -s settings/.tmux.conf .
 
 git config --global user.email "Eamonn.m.r@gmail.com"
 git config --global user.name "EamonnMR"
+git config --global core.editor "vim"
 
 # Install Vundle plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
