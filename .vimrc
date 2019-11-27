@@ -3,6 +3,8 @@ filetype off                  " required
 
 set history=9001
 
+autocmd BufNewFile,BufRead *.fx set syntax=c
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
