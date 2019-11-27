@@ -22,6 +22,7 @@ ln -s settings/.bashrc
 ln -s settings/.Xmodmap .
 ln -s settings/.vimrc .
 ln -s settings/.tmux.conf .
+ln -s settings/lubuntu/startup.sh
 
 git config --global user.email "Eamonn.m.r@gmail.com"
 git config --global user.name "EamonnMR"
@@ -38,14 +39,33 @@ xmodmap ~/.Xmodmap
 # Manual Installation required later, but get the files up front
 git clone git@github.com:godotengine/godot-blender-exporter.git
 git clone git@github.com:BabylonJS/BlenderExporter.git
+# Still not updated for Blender 2.8
+# git clone git@github.com:godotengine/collada-exporter.git
+
+# ln -s collada-exporter/io_scene_dae /usr/share/blender/scripts/addons/
+
+# Python
+sudo apt install virtualenv
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git;
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+# Cpp
+sudo apt install lldb clang gdb
 
 # Games
 sudo apt install \
   mupen64 \
   dosbox \
   wine \
-  gnash \
+
+# Not supported anymore !? :O
+# gnash \
   browser-plugin-freshplayer-pepperflash \
+
+dpkg --add-architecture i386 && apt-get update && apt-get install wine32
+
   
 # Media
 sudo apt install \

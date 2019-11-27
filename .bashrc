@@ -4,6 +4,8 @@ alias sheepshaver="sudo padsp SheepShaver"
 
 # Python stuff
 # TODO: Set this up to work with pyenv
+export PYENV_ROOT="$HOME/.pyenv";
+export PATH="$PYENV_ROOT/bin:$PATH";
 alias venv="virtualenv venv" # Still defaulting to system python
 alias venv2="virtualenv -p python2 venv2" # Creates an explicitly python2 venv for your 2/3 projects
 alias venv3="virtualenv -p python3 venv"
@@ -15,6 +17,9 @@ alias pir="pip install -r requirements.txt"
 
 # Load NVM (Only if NVM is installed)
 export NVM_DIR="$HOME/.nvm"
+
+# Flutter
+ export PATH="$PATH:~/flutter/bin"
 
 if [ -d "$NVM_DIR" ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -68,6 +73,8 @@ fi
 #From: http://stackoverflow.com/a/27776822
 # Respond to different OSs differently (so you can use the same bashrc across machines)
 
+eval "$(pyenv init -)"
+
 case "$(uname -s)" in
 
   Darwin)  # OSX
@@ -82,7 +89,7 @@ case "$(uname -s)" in
      # I like OSX's 'open'
      alias open="xdg-open"
      # Renoise needs to run as root for the audio to sound good and needs the VST path set.
-     alias renoise="export VST_PATH="$VST_PATH:/usr/lib/vst:~/.vst:/usr/lib/lxvst" && sudo -E bash -c 'renoise'"
+     alias renoise="VST_PATH='$VST_PATH:/usr/lib/vst:~/.vst:/usr/lib/lxvst' renoise"
      # Getting stuff into the clipboard (requires xClip)
      alias clip="xclip -selection c"
      ;;
