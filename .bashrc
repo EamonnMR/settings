@@ -74,7 +74,7 @@ case "$SHELL" in
     fi
     unset color_prompt force_color_prompt
   ;;
-
+esac
 
 
 
@@ -82,16 +82,15 @@ case "$SHELL" in
 # Respond to different OSs differently (so you can use the same bashrc across machines)
 
 # eval "$(pyenv init -)"
-
-case "$(uname -s)" in
-
-  Darwin)  # OSX
+OSNAME="$(uname -s)";
+case $OSNAME in
+  "Darwin")  # OSX
      ssh-add -K  # Non-annoying SSH Add)
      alias psg="ps -ax | grep";
      alias clip="pbcopy";
      ;;
 
-  Linux)
+  "Linux")
      # Find this running program
      alias psg="ps -aux | grep";
      # I like OSX's 'open'
