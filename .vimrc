@@ -18,6 +18,9 @@ Plugin 'rust-lang/rust.vim'
 " My favorite SublimeText/Atom feature "
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'ziglang/zig.vim'
+
+Plugin 'zah/nim.vim'
 call vundle#end()
 
 filetype plugin indent on
